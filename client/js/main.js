@@ -28,7 +28,6 @@ myModule.directive('headerChange', function($window){
             var techElem = angular.element('.tech-wrap');
             var projectsElem = angular.element('#projects');
             var contactElem = angular.element('#contact');
-            var finalProjectWrap = angular.element('#final-img');
             var topOfScreen = $window.scrollY;
 
             if (topOfScreen > myStoryElem[0].offsetTop - 100 && topOfScreen < techElem[0].offsetTop - 200) {
