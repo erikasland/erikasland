@@ -193,7 +193,7 @@
     }
 
     #mystory{
-        background-color: #5e696d;
+        background-color: #A7BAC1;
     }
 
     .about-me-wrapper{
@@ -209,10 +209,10 @@
 
     .about-me-summary{
         font-size: 1em;
-        border-top: .15em solid #9175bd;
+        border-top: .15em solid #87989E;
         padding-top: 1em;
         margin-top: 1em;
-        border-bottom: .15em solid #9175bd;
+        border-bottom: .15em solid #87989E;
         padding-bottom: 1em;
         margin-bottom: 1em;
         color: white;
@@ -270,7 +270,7 @@
 
     #projects{
         font-size: 2em;
-        background-color: #ACC0C8;
+        background-color: #87989E;
     }
 
     .total-project-wrap{
