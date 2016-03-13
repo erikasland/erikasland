@@ -172,6 +172,7 @@
         left: 50%;
         bottom: -2em;
         z-index: 2;
+        cursor: pointer;
     }
 
     .menu-icon{
@@ -335,7 +336,7 @@
         font-family: 'WSLight';
         font-size: .5em;
         text-align: center;
-        color: black;
+        color: white;
     }
 
     .project-bottom-desc{
@@ -353,6 +354,7 @@
         color: white;
         position: relative;
         left: 50%;
+        cursor: pointer;
     }
 
     #btn-three-margin{
