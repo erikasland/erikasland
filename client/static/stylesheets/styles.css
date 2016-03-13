@@ -28,6 +28,22 @@
 
 @media screen and (min-width: 0px){
 
+    .checkitout-btn, .project-container, .profile-img, #down-arrow-link, .hire-me-btn{
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .contact-contain, .copyright-info, #dots-menu-nav{
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
     html{
         height: 100%;
         background-color: #9175bd;
@@ -93,8 +109,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        -moz-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+        -o-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
-        width: 15em;
+        width: 16em;
         height: 7em;
     }
 
@@ -118,7 +138,7 @@
     .hire-me-btn{
         border: solid white .2em;
         border-radius: 75px;
-        width: 81%;
+        width: 85%;
         height: 2.5em;
         background-color: transparent;
         font-size: 1em;
@@ -127,7 +147,6 @@
         position: relative;
         left: 50%;
         bottom: -2em;
-        transform: translateX(-50%);
         z-index: 2;
     }
 
@@ -156,7 +175,6 @@
         position: absolute;
         bottom: 0px;
         left: 50%;
-        transform: translateX(-50%);
         width: 5em;
         height: 5em;
     }
@@ -176,6 +194,10 @@
         bottom: 2%;
         width: 50px;
         height: 50px;
+        -webkit-transform: translateY(-98%) translateX(-40%);
+        -moz-transform: translateY(-98%) translateX(-40%);
+        -ms-transform: translateY(-98%) translateX(-40%);
+        -o-transform: translateY(-98%) translateX(-40%);
         transform: translateY(-98%) translateX(-40%);
         z-index: 2;
         animation: bounce 2s infinite;
@@ -187,9 +209,27 @@
     }
 
     @keyframes bounce{
-         0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-         40% {transform: translateY(-30px);}
-         60% {transform: translateY(-15px);}
+        0%, 20%, 50%, 80%, 100% {
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40% {
+            -webkit-transform: translateY(-30px);
+            -moz-transform: translateY(-30px);
+            -ms-transform: translateY(-30px);
+            -o-transform: translateY(-30px);
+            transform: translateY(-30px);
+        }
+        60% {
+            -webkit-transform: translateY(-15px);
+            -moz-transform: translateY(-15px);
+            -ms-transform: translateY(-15px);
+            -o-transform: translateY(-15px);
+            transform: translateY(-15px);
+        }
     }
 
     #mystory{
@@ -225,7 +265,6 @@
         height: 10em;
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
         border-radius: 50%;
     }
 
@@ -282,7 +321,6 @@
         height: 100%;
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
         padding: 3em 0 0 0;
     }
 
@@ -301,7 +339,7 @@
     }
 
     .project-bottom-desc{
-        padding-top: 1em;
+        padding-top: 10%;
     }
 
     .checkitout-btn{
@@ -315,7 +353,6 @@
         color: white;
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
     }
 
     #btn-three-margin{
@@ -344,7 +381,7 @@
     }
 
     .back {
-        transform: rotateY(180deg);
+        visibility: hidden;
     }
 
     #contact{
@@ -389,7 +426,6 @@
         width: 15em;
         margin: 0 auto;
         top: 50%;
-        transform: translateY(-50%);
         position: relative;
         z-index: 2;
     }
@@ -398,17 +434,18 @@
         height: 10%;
         background-color: #364347;
     }
+
     .copyright-info{
         font-size: 1em;
         font-family: 'WSLight';
         text-align: center;
         top: 50%;
-        transform: translateY(-50%);
         position: relative;
     }
 }
 
 @media screen and (min-width: 481px){
+   
     header{
         height: 50px;
     }
@@ -540,7 +577,6 @@
         right: 45px;
         top: 50%;
         text-align: right;
-        transform: translateY(-50%);
         z-index: 2;
         visibility: visible;
     }
@@ -561,6 +597,10 @@
     }
 
     li:hover .dots-menu-dot{
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
         transform: scale(1.1);
         transition: background 0.215s ease-in-out 0s, transform 0.215s ease-in-out 0s, border 0.215s ease-in-out 0s;
         background-color: black;
@@ -609,26 +649,7 @@
     }
 
     #up-arrow-link{
-        position: fixed;
-        display: inline-block;
         right: 2%;
-        bottom: 2%;
-        width: 50px;
-        height: 50px;
-        transform: translateY(-98%) translateX(-40%);
-        z-index: 2;
-        animation: bounce 2s infinite;
-    }
-
-    #up-arrow{
-        width: 50px;
-        height: 50px;
-    }
-
-    @keyframes bounce{
-         0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-         40% {transform: translateY(-30px);}
-         60% {transform: translateY(-15px);}
     }
 
     p{
@@ -762,7 +783,11 @@
         height: 11.95em;
     }
 
-    .flip-container:hover .flipper, .flip-container.hover .flipper {
+    .flip-container:hover .flipper, .flip-container.hover .flipper, .back {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
         transform: rotateY(180deg);
     }
 
@@ -786,11 +811,15 @@
     }
 
     .front {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
         transform: rotateY(0deg);
     }
 
     .back {
-        transform: rotateY(180deg);
+        visibility: visible;
     }
 
     .contact-contain{
