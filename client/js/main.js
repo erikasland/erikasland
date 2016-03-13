@@ -51,6 +51,81 @@ myModule.directive('headerChange', function($window){
     }
 })
 
+myModule.directive('aboutLocation', function($window){
+    return {
+            link: function(scope, element){
+                angular.element($window).bind("scroll", function() {
+                var topOfScreen = $window.scrollY;
+                var aboutWrap = angular.element('#mystory');
+                var techWrap = angular.element('.tech-wrap');
+
+                if(aboutWrap[0].offsetTop - 100 <= topOfScreen && topOfScreen < techWrap[0].offsetTop - 200){
+                    element.addClass('border-black');
+                }else{
+                    element.removeClass('border-black');
+                }
+                scope.$apply();
+            });
+        }
+    }
+})
+
+myModule.directive('techLocation', function($window){
+    return {
+            link: function(scope, element){
+                angular.element($window).bind("scroll", function() {
+                var topOfScreen = $window.scrollY;
+                var projectWrap = angular.element('#projects');
+                var techWrap = angular.element('.tech-wrap');
+
+                if(techWrap[0].offsetTop - 200 <= topOfScreen && topOfScreen < projectWrap[0].offsetTop - 200){
+                    element.addClass('border-black');
+                }else{
+                    element.removeClass('border-black');
+                }
+                scope.$apply();
+            });
+        }
+    }
+})
+
+myModule.directive('projectLocation', function($window){
+    return {
+            link: function(scope, element){
+                angular.element($window).bind("scroll", function() {
+                var topOfScreen = $window.scrollY;
+                var projectWrap = angular.element('#projects');
+                var contactWrap = angular.element('#contact');
+
+                if(projectWrap[0].offsetTop - 200 <= topOfScreen && topOfScreen < contactWrap[0].offsetTop - 200){
+                    element.addClass('border-black');
+                }else{
+                    element.removeClass('border-black');
+                }
+                scope.$apply();
+            });
+        }
+    }
+})
+
+myModule.directive('contactLocation', function($window){
+    return {
+            link: function(scope, element){
+                angular.element($window).bind("scroll", function() {
+                var topOfScreen = $window.scrollY;
+                var contactWrap = angular.element('#contact');
+
+                if(contactWrap[0].offsetTop - 200 <= topOfScreen){
+                    element.addClass('border-black');
+                }else{
+                    element.removeClass('border-black');
+                }
+                scope.$apply();
+            });
+        }
+    }
+})
+
 myModule.directive('iDo', function(){
     return function(scope){
         var element = angular.element('.changing-text');
