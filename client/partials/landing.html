@@ -1,19 +1,220 @@
 <div id='wrapper'>
-
-<h1>ERIK ASLAND</h1>
+    <header header-change>
+        <h1 class='main-title'>ERIK ÁSLAND</h1>
+    </header>
     <div id='dots-menu-nav'>
         <nav id='vertical-dots-menu'>
             <ul>
-                <li>
-                    <a href="" class='dots-menu-anchor'><span class='dots-menu-dot'></span><span class='dots-menu-label'>ERIK ASLAND</span></a>
+                <li class='nav-li'>
+                    <a href="" ng-click='landingControl.goToAnchor("mystory")' class='dots-menu-anchor'><span class='dots-menu-dot'></span><span class='dots-menu-label'>ABOUT</span></a>
                 </li>
-                <li>
-                    <a href="" class='dots-menu-anchor'><span class='dots-menu-dot'></span><span class='dots-menu-label'>PROJECTS</span></a>
+                <li class='nav-li'>
+                    <a href="" ng-click='landingControl.goToAnchor("projects")' class='dots-menu-anchor'><span class='dots-menu-dot'></span><span class='dots-menu-label'>PROJECTS</span></a>
                 </li>
-                <li>
-                    <a href="" class='dots-menu-anchor'><span class='dots-menu-dot'></span><span class='dots-menu-label'>CONTACT</span></a>
+                <li class='nav-li'>
+                    <a href="" ng-click='landingControl.goToAnchor("projects")' class='dots-menu-anchor'><span class='dots-menu-dot'></span><span class='dots-menu-label'>PROJECTS</span></a>
+                </li>
+                <li class='nav-li'>
+                    <a href="" ng-click='landingControl.goToAnchor("contact")' class='dots-menu-anchor'><span class='dots-menu-dot'></span><span class='dots-menu-label'>CONTACT</span></a>
                 </li>
             </ul>
         </nav>
+    </div>
+    <div class='intro-div'>
+        <h1 class='intro-title'><span>I build & design</span><br><span i-do class='changing-text'></span></h1>
+        <button class='hire-me-btn' ng-click='landingControl.goToAnchor("contact")'>AVAILABLE FOR HIRE</button>
+    </div>
+    <a button-disappear href='' id='up-arrow-link' ng-click='landingControl.goToAnchor("wrapper")' ng-hide='!landingControl.showUpArrow'  ng-show='landingControl.showUpArrow'>
+        <img id='up-arrow' src='../static/images/uparrow.png'>
+    </a>
+    <div id='empty-space-div'>
+        <div class='background-img'></div>
+        <a href='' id='down-arrow-link' ng-click='landingControl.goToAnchor("mystory")'>
+            <img id='down-arrow' src='../static/images/downarrow.png'>
+        </a>
+    </div>
+    <div id='mystory'>
+        <div class='about-me-wrapper'>
+            <div class='about-me-container'>
+                <img class='profile-img' src="../static/images/profile.jpg">
+                <p class='about-me-summary'>As a driven wide-eyed Full-Stack Web Developer possessing an obsession for both Javascript and Python, I seek to leverage latest technologies to change the face of the human experience. I possess a constant growth mentality and a hunger to stay current with my craft so I can be the greatest asset possible to those on my team. I spend most of my freetime coding, hiking, or socializing with friends. On a deep level, I believe that we now live in the most exhilarating era in known human history. I just want to contribute to that excitement through my work.</p>
+            </div>
+        </div>
+        <div class='tech-wrap'>
+            <div class='tech-contain'>
+                <p class='tech-title'>LANGUAGES</p>
+                <div class='icon-wrap'>
+                    <ul>
+                        <li class='icon-li'><img class='icons' src='../static/images/js.jpg'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/python.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/html5.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/css3.jpg'</li>
+                        <li class='icon-li center-icons'><img class='icons' src='../static/images/ruby.png'</li>
+                    </ul>
+                </div>
+            </div>
+            <div class='tech-contain'>
+                <p class='tech-title'>FRAMEWORKS</p>
+                <div class='icon-wrap'>
+                    <ul>
+                        <li class='icon-li'><img class='icons' src='../static/images/angular.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/django.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/flask.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/express.png'</li>
+                    </ul>
+                </div>
+            </div>
+            <div class='tech-contain'>
+                <p class='tech-title'>DATABASES</p>
+                <div class='icon-wrap'>
+                    <ul>
+                        <li class='icon-li'><img class='icons' src='../static/images/mysql.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/postgres.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/sqlite.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/mongodb.jpg'</li>
+                    </ul>
+                </div>
+            </div>
+            <div class='tech-contain'>
+                <p class='tech-title'>SERVERS</p>
+                <div class='icon-wrap'>
+                    <ul>
+                        <li class='icon-li'><img class='icons' src='../static/images/node.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/apache.jpg'</li>
+                        <li class='icon-li center-icons'><img class='icons' src='../static/images/aws.png'</li>
+                    </ul>
+                </div>
+            </div>
+            <div class='tech-contain tech-contain-margin'>
+                <p class='tech-title'>MISC</p>
+                <div class='icon-wrap'>
+                    <ul>
+                        <li class='icon-li'><img class='icons' src='../static/images/github.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/ubuntu.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/sublime.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/terminal.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/mongoose.png'</li>
+                        <li class='icon-li'><img class='icons' src='../static/images/ajax.png'</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='projects'>
+        <div class='project-container'>
+            <div class='total-project-wrap total-project-margin-right'>
+                <div class='flip-container flip-container-one' id='flip-container-one' ontouchstart="this.classList.toggle('hover')" ng-click='landingControl.redirToProject(2)'>
+                    <div class='flipper'>
+                        <div class='front'>
+                            <img class='project-img' src="../static/images/grindss.png">
+                            <div class='project-bottom-desc'>
+                                <p class='project-caption'>Grind is a workflow app designed to increase workplace happiness, health, and efficiency through regular activity packed breaks throughout the course of their workday.</p>
+                            </div>
+                        </div>
+                        <div class='back'>
+                            <p class='img-para'>TECHNOLOGY USED: Javacript, Mongo, Mongoose, Express, Angular, Node.js, and Amazon EC2</p>
+                            <div class='black-opaq-layer'></div>
+                            <img class='project-img' src="../static/images/grindss.png">
+                        </div>
+                    </div>
+                </div>
+                <button class='checkitout-btn' ng-click='landingControl.redirToProject(2)'>CHECK IT OUT</button>
+            </div>
+            <div class='total-project-wrap'>
+                <div class='flip-container' ontouchstart="this.classList.toggle('hover')" ng-click='landingControl.redirToProject(3)'>
+                    <div class='flipper'>
+                        <div class='front'>
+                            <img class='project-img' src="../static/images/florianss.png">
+                            <div class='project-bottom-desc'>
+                                <p class='project-caption'>Florian is a Django e-commerce app that scrapes information about flowers from a remote site and presents them in an orderly fashion for users to add to their cart.</p>
+                            </div>
+                        </div>
+                        <div class='back'>
+                            <p class='img-para'>TECHNOLOGY USED: Python, Django, Ajax, Beautiful Soup, Amazon EC2, jQuery, and Google Font API</p>
+                            <div class='black-opaq-layer'></div>
+                            <img class='project-img' src="../static/images/florianss.png">
+                        </div>
+                        <div class='project-bottom-desc'>
+                            <p class='project-caption'>FLORIAN</p>
+                        </div>
+                    </div>
+                </div>
+                <button class='checkitout-btn' id='btn-three-margin' ng-click='landingControl.redirToProject(3)'>CHECK IT OUT</button>
+            </div>
+            <div class='total-project-wrap total-project-margin-right'>
+                <div class='flip-container' ontouchstart="this.classList.toggle('hover')" ng-click='landingControl.redirToProject(1)'>
+                    <div class='flipper'>
+                        <div class='front'>
+                            <img class='project-img' src="../static/images/dbss.png">
+                            <div class='project-bottom-desc'>
+                                <p class='project-caption'>Discussion Board is a forum app built with the M.E.A.N stack while I was attending Coding Dojo, a 4 month web development immersive.</p>
+                            </div>
+                        </div>
+                        <div class='back'>
+                            <p class='img-para'>TECHNOLOGY USED: Javascript, Mongo, Mongoose, Express, Angular, Node.js, Amazon EC2, and Google Font API</p>
+                            <div class='black-opaq-layer'></div>
+                            <img class='project-img' src="../static/images/dbss.png">
+                        </div>
+                        <div class='project-bottom-desc'>
+                            <p class='project-caption'>DISCUSSION BOARD</p>
+                        </div>
+                    </div>
+                </div>
+                <button class='checkitout-btn' ng-click='landingControl.redirToProject(1)'>CHECK IT OUT</button>
+            </div>
+            <div class='total-project-wrap'>
+                <div class='flip-container' ontouchstart="this.classList.toggle('hover')" ng-click='landingControl.redirToProject(4)'>
+                    <div class='flipper'>
+                        <div class='front'>
+                            <img class='project-img' id='final-img' src="../static/images/cwlss.png">
+                            <div class='project-bottom-desc'>
+                                <p class='project-caption'>Cherrywood Legends is a HTML5/Javascript game of probability, where our hero (Link) destroys castles in search of his beloved flag.</p>
+                            </div>
+                        </div>
+                        <div class='back'>
+                            <p class='img-para'>TECHNOLOGY USED: Javascript, Mongo, Mongoose, Express, Angular, Node.js, HTML5, CSS3, Canvas, Amazon EC2, jQuery, and Google Font API</p>
+                            <div class='black-opaq-layer'></div>
+                            <img class='project-img' src="../static/images/cwlss.png">
+                        </div>
+                        <div class='project-bottom-desc'>
+                            <p class='project-caption'>CHERRYWOOD LEGENDS</p>
+                        </div>
+                    </div>
+                </div>
+                <button class='checkitout-btn' ng-click='landingControl.redirToProject(4)'>CHECK IT OUT</button>
+            </div>
+        </div>
+    </div>
+        <div id='contact'>
+            <div class='contact-contain'>
+                <h2 class='contact-title'>Want to work together?</h2>
+                <h3 class='contact-sub-title'>I'm currently seeking new opportunities.</h3>
+                <div class='contact-icons-wrapper'>
+                    <div class='contact-icons-container'>
+                        <a href='http://www.linkedin.com/in/erikasland'>
+                            <img class='contact-icons' src='../static/images/linkedin.jpg'>
+                        </a>
+                    </div>
+                    <div class='contact-icons-container'>
+                        <a href='http://stackoverflow.com/users/5477152/ea87'>
+                            <img class='contact-icons' src='../static/images/so-icon.jpg'>
+                        </a>
+                    </div>
+                    <div class='contact-icons-container'>
+                        <a href='https://github.com/erikasland'>
+                            <img class='contact-icons' src='../static/images/github-icon.jpg'>
+                        </a>
+                    </div>
+                    <div class='contact-icons-container icon-padding'>
+                        <a href="mailto:erikasland87@gmail.com">
+                            <img class='contact-icons' src='../static/images/email-icon.jpg'>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h6 class='copyright-info'>Erik Ásland © 2016</h6>
+        </footer>
     </div>
 </div>

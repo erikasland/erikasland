@@ -1,72 +1,821 @@
+*, :after, :before{
+    box-sizing: border-box;
+}
+
 @font-face{
     font-family: 'WSLight';
-    src: url(../fonts/WorkSans-Light.otf);
+    src: url(../fonts/WorkSans-Light.otf),
+    url(../fonts/WorkSans-Light.eot),
+    url(../fonts/WorkSans-Light.woff),
+    url(../fonts/WorkSans-Light.ttf)
 }
 
-html{
-    background: url(../images/emma.jpg) no-repeat center center fixed;
-    background-size: cover;
+@font-face{
+    font-family: 'WSReg';
+    src: url(../fonts/WorkSans-Regular.otf),
+    url(../fonts/WorkSans-Regular.eot),
+    url(../fonts/WorkSans-Regular.woff),
+    url(../fonts/WorkSans-Regular.ttf)
 }
 
-#wrapper{
-    width: 100%;
-    font-size: 20em;
-    color: white;
+@font-face{
+    font-family: 'WSBold';
+    src: url(../fonts/WorkSans-Bold.otf),
+    url(../fonts/WorkSans-Bold.eot),
+    url(../fonts/WorkSans-Bold.woff),
+    url(../fonts/WorkSans-Bold.ttf)
 }
 
+@media screen and (min-width: 0px){
 
-h1{
-    font-family: 'WSLight'
+    html{
+        height: 100%;
+        background-color: #9175bd;
+    }
+
+    body{
+        height: 100%
+
+    }
+
+    #view{
+        height: 100%;
+    }
+
+    #wrapper{
+        width: 100%;
+        height: 100%;
+        color: white;
+    }
+
+    .background-img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: -1;
+    }
+
+    .background-img::after{
+        content: "";
+        background: url(../images/seattle1.jpg) no-repeat center center fixed;
+        background-size: cover;
+        opacity: .3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    header{
+        background-color: rgba(40,40,46,0.95);
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        z-index: 2;
+        background-color: transparent;
+    }
+
+    .main-title{
+        font-family: 'WSLight';
+        font-size: 1.5em;
+        padding: 10px 0 0 10px;
+        color: white;
+        display: inline-block;vertical-align: top;
+    }
+
+    #dots-menu-nav{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .intro-div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 15em;
+        height: 7em;
+    }
+
+    .intro-title{
+        font-family: 'WSBold';
+        color: white;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .changing-text{
+        border-right: 1px lightgrey solid;
+        display: inline-block;
+        text-align: center;
+    }
+
+    @keyframes blink{
+        40% {border-right: 1px transparent solid;}
+    }
+
+    .hire-me-btn{
+        border: solid white .2em;
+        border-radius: 75px;
+        width: 81%;
+        height: 2.5em;
+        background-color: transparent;
+        font-size: 1em;
+        font-family: 'WSBold';
+        color: white;
+        position: relative;
+        left: 50%;
+        bottom: -2em;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .menu-icon{
+        width: 4em;
+        height: 4em;
+        margin: 18px 27px 0 0;
+        float: right;
+        display: inline-block;vertical-align: top;
+    }
+
+    .name-title{
+        font-family: 'WSBold';
+    }
+
+
+    a{
+        text-decoration: none;
+    }
+
+    #empty-space-div{
+        height: 100%;
+    }
+
+    #down-arrow-link{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5em;
+        height: 5em;
+    }
+
+    #down-arrow{
+        width: 5em;
+        height: 5em;
+        animation: bounce 2s infinite;
+        position: relative;
+        top: 0px;
+    }
+
+    #up-arrow-link{
+        position: fixed;
+        display: inline-block;
+        right: 0%;
+        bottom: 2%;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-98%) translateX(-40%);
+        z-index: 2;
+        animation: bounce 2s infinite;
+    }
+
+    #up-arrow{
+        width: 50px;
+        height: 50px;
+    }
+
+    @keyframes bounce{
+         0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+         40% {transform: translateY(-30px);}
+         60% {transform: translateY(-15px);}
+    }
+
+    #mystory{
+        background-color: #5e696d;
+    }
+
+    .about-me-wrapper{
+        padding: 4em 0 4.5em 0;
+        height: 41em;
+    }
+
+    .about-me-container{
+        width: 15em;
+        height: 42em;
+        margin: 0 auto;
+    }
+
+    .about-me-summary{
+        font-size: 1em;
+        border-top: .15em solid #9175bd;
+        padding-top: 1em;
+        margin-top: 1em;
+        border-bottom: .15em solid #9175bd;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        color: white;
+        font-family: 'WSLight';
+        text-align: center;
+    }
+
+    .profile-img{
+        width: 10em;
+        height: 10em;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+    }
+
+    .technologies{
+        background-color: white;
+    }
+
+    .tech-wrap{
+        padding: 0 0 5em 0;
+    }
+
+    .tech-contain{
+        width: 15em;
+        margin: 0 auto 4em auto;
+    }
+
+    .tech-contain-margin{
+        margin: 0 auto;
+    }
+
+    .tech-title{
+        font-size: 1.5em;
+        font-family: 'WSBold';
+        text-align: center;
+        color: white;
+    }
+
+    .icon-li{
+        display: inline-block;vertical-align: top;
+        padding: .62em;
+    }
+
+    .icons{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .center-icons{
+        margin-left: 25%;
+    }
+
+    #projects{
+        font-size: 2em;
+        background-color: #ACC0C8;
+    }
+
+    .total-project-wrap{
+        padding-bottom: 2em;
+    }
+
+    .project-container{
+        width: 7em;
+        height: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 3em 0 0 0;
+    }
+
+    .project-img{
+        width: 100%;
+        height: 4em;
+        display: inline-block;vertical-align: top;
+        border-radius: 10px;
+    }
+
+    .project-caption{
+        font-family: 'WSLight';
+        font-size: .5em;
+        text-align: center;
+        color: black;
+    }
+
+    .checkitout-btn{
+        font-family: 'WSBold';
+        width: 80%;
+        height: 2.5em;
+        border-radius: 60px;
+        font-size: .5em;
+        background-color: transparent;
+        border: white solid .2em;
+        color: white;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #btn-three-margin{
+        margin-top: 2em;
+    }
+
+    .flip-container {
+        display: inline-block;vertical-align: top;
+    }
+
+    .flip-container, .front, .back {
+        width: 100%;
+        height: 9em;
+    }
+
+    .flipper {
+        position: relative;
+        height: 100%;
+    }
+
+    .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .back {
+        transform: rotateY(180deg);
+    }
+
+    #contact{
+        background-color: #5e696d;
+        height: 100%;
+    }
+
+    .contact-title{
+        font-size: 1.2em;
+        font-family: 'WSBold';
+        text-align: center;
+        margin: 0 0 .5em 0;
+    }
+    
+    .contact-sub-title{
+        font-size: 1.2em;
+        font-family: 'WSLight';
+        text-align: center;
+    }
+
+    .contact-icons-wrapper{
+        width: 98%;
+        margin: 1em auto 0 auto;
+    }
+
+    .contact-icons-container{
+        display: inline-block;vertical-align: top;
+        padding-right: .4em;
+    }
+
+    .contact-icons{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .icon-padding{
+        padding-right: 0;
+    }
+
+    .contact-contain{
+        width: 15em;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+        z-index: 2;
+    }
+
+    footer{
+        height: 10%;
+        background-color: #364347;
+    }
+    .copyright-info{
+        font-size: 1em;
+        font-family: 'WSLight';
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+    }
 }
 
-/*header{
-    width: 100%;
-    height: 10%;
-    position: fixed;
-}*/
-a{
-    text-decoration: none;
+@media screen and (min-width: 481px){
+    header{
+        height: 50px;
+    }
+
+    .main-title{
+        font-size: 2em;
+    }
+
+    .intro-div{
+        width: 25em;
+        height: 9em;
+    }
+
+    .intro-title{
+        font-size: 2em;
+    }
+
+    .hire-me-btn{
+        font-size: 1.1em;
+    }
+
+    .menu-icon{
+        width: 4em;
+        height: 4em;
+        margin: 18px 27px 0 0;
+        float: right;
+        display: inline-block;vertical-align: top;
+    }
+
+    #down-arrow-link, #down-arrow{
+        width: 7em;
+        height: 7em;
+    }
+
+    #up-arrow-link, #up-arrow{
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-me-wrapper{
+        height: 53em;
+    }
+
+    .about-me-container{
+        height: 44em;
+        width: 24em;
+    }
+
+    .profile-img{
+        width: 12em;
+        height: 12em;
+    }
+ 
+    .about-me-summary{
+        font-size: 1.5em;
+    }
+
+    .tech-contain{
+        width: 24em;
+    }
+
+    .tech-title{
+        font-size: 2em;
+    }
+
+    .icons{
+        width: 170px;
+        height: 170px;
+    }
+
+    .project-container{
+        width: 12em;
+    }
+
+    .project-img{
+        height: 7em;
+    }
+
+    .project-bottom-desc{
+        width: 12em;
+    }
+
+    .project-caption{
+        font-size: .6em;
+    }
+
+    .checkitout-btn{
+        font-size: .6em;
+    }
+
+    #btn-three-margin{
+        margin-top: 2em;
+    }
+
+    .flip-container, .front, .back {
+        height: 12em;
+    }
+
+    .contact-contain{
+        width: 24em;
+    }
+
+    .contact-title, .contact-sub-title{
+        font-size: 2em;
+    }
+
+    .contact-icons{
+        width: 85px;
+        height: 85px;
+    }
+
+    .copyright-info{
+        font-size: 1.5em;
+    }
 }
 
-#dots-menu-nav{
-    position: fixed;
-    right: 70px;
-    top: 50%;
-    text-align: right;
-}
+@media screen and (min-width: 1024px){
 
-li{
-    margin: 15px 0;
-}
+    header{
+        height: 67px;
+    }
 
-.dots-menu-dot{
-    position: relative;
-    display: inline-block;
-    top: 4px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: darkgrey;
-    float: right;
-}
+    .main-title{
+        font-size: 3em;
+    }
 
-li:hover .dots-menu-dot{
-    transform: scale(1.1);
-    transition: background 0.215s ease-in-out 0s, transform 0.215s ease-in-out 0s, border 0.215s ease-in-out 0s;
-    background-color: black;
-    border: 1px solid white;
-}
+    #dots-menu-nav{
+        position: fixed;
+        right: 45px;
+        top: 50%;
+        text-align: right;
+        transform: translateY(-50%);
+        z-index: 2;
+        visibility: visible;
+    }
 
-li:hover .dots-menu-label{
-    color: white;
-    top: 1px;
-    font-family: 'WSLight'
-}
+    .dots-menu-dot{
+        position: relative;
+        display: inline-block;
+        top: 4px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: white;
+        float: right;
+    }
 
-.dots-menu-label{
-    position: relative;;
-    margin-right: 5px;
-    padding: 5px;
-    color: transparent;
-    font-size: 1.1rem;
+    .nav-li{
+        margin-top: 30px;
+    }
+
+    li:hover .dots-menu-dot{
+        transform: scale(1.1);
+        transition: background 0.215s ease-in-out 0s, transform 0.215s ease-in-out 0s, border 0.215s ease-in-out 0s;
+        background-color: black;
+        border: 2px solid white;
+    }
+
+    li:hover .dots-menu-label{
+        color: white;
+        top: 1px;
+        font-family: 'WSBold'
+    }
+
+    .dots-menu-label{
+        position: relative;;
+        margin-right: 5px;
+        padding: 5px;
+        color: transparent;
+        font-size: 1.2rem;
+    }
+
+    .intro-div{
+        width: 45em;
+        height: 15em;
+    }
+
+    .intro-title{
+        font-size: 3em;
+    }
+
+    .hire-me-btn{
+        width: 60%;
+        font-size: 2em;
+    }
+
+    .hire-me-btn:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .menu-icon{
+        width: 4em;
+        height: 4em;
+        margin: 18px 27px 0 0;
+        float: right;
+        display: inline-block;vertical-align: top;
+    }
+
+    #up-arrow-link{
+        position: fixed;
+        display: inline-block;
+        right: 2%;
+        bottom: 2%;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-98%) translateX(-40%);
+        z-index: 2;
+        animation: bounce 2s infinite;
+    }
+
+    #up-arrow{
+        width: 50px;
+        height: 50px;
+    }
+
+    @keyframes bounce{
+         0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+         40% {transform: translateY(-30px);}
+         60% {transform: translateY(-15px);}
+    }
+
+    p{
+        color: black;
+    }
+
+    .about-me-wrapper{
+        padding: 4em 0 4.5em 0;
+        height: 63em;
+    }
+
+    .about-me-container{
+        width: 42em;
+        height: 55em;
+    }
+
+    .about-me-summary{
+        font-size: 2em;
+    }
+
+    .profile-img{
+        width: 20em;
+        height: 20em;
+    }
+
+    .tech-wrap{
+        padding: 0 0 5em 0;
+        width: 46.3em;
+        margin: 0 auto;
+    }
+
+    .tech-contain{
+        width: 16.5em;
+        margin-left: 4.5em;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .tech-contain-margin{
+        margin-left: 11em;
+        width: 24.5em;
+    }
+
+    .tech-title{
+        font-size: 2em;
+    }
+
+
+    ul{
+        margin-top: 30px;
+    }
+
+    .icon-li{
+        display: inline-block;vertical-align: top;
+    }
+
+    .icons{
+        width: 110px;
+        height: 110px;
+        border-radius: 10px;
+    }
+
+    .project-container{
+        width: 24em;
+        height: 33.5em;
+    }
+
+    .total-project-wrap{
+        padding-bottom: 2em;
+        width: 10em;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .total-project-margin-right{
+        margin-right: 3.5em;
+    }
+
+    .img-para{
+        position: absolute;
+        color: white;
+        z-index: 1;
+        height: 6em;
+        font-size: .6em;
+        font-family: 'WSLight';
+        top: 15%;
+        text-align: center;
+    }
+
+    .black-opaq-layer{
+        height: 6em;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        border-radius: 10px;
+        background-color: black;
+        opacity: .5;
+    }
+
+    .project-img{
+        height: 6em;
+    }
+
+    .project-bottom-desc{
+        width: 10em;
+        padding-top: 1em;
+    }
+
+    .project-caption{
+        font-size: .6em;
+    }
+
+    .checkitout-btn{
+        width: 100%;
+    }
+
+    .checkitout-btn:hover{
+        background-color: #9175bd;
+        border: .1em solid #9175bd;
+        color: white;
+    }
+
+    #btn-three-margin{
+        margin-top: 2em;
+    }
+
+    .flip-container {
+        display: inline-block;vertical-align: top;
+    }
+
+    #flip-container-one, .flip-container-one{
+        height: 11.95em;
+    }
+
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container, .front, .back {
+        width: 100%;
+        height: 11em;
+    }
+
+    .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+        height: 100%;
+    }
+
+    .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .front {
+        transform: rotateY(0deg);
+    }
+
+    .back {
+        transform: rotateY(180deg);
+    }
+
+    .contact-contain{
+        width: 39.2em;
+    }
+    
+    .contact-title{
+        font-size: 3em;
+    }
+    
+    .contact-sub-title{
+        font-size: 3em;
+    }
+
+    .contact-icons-wrapper{
+        margin: 4em auto 0 auto;
+    }
+
+    .contact-icons{
+        width: 145px;
+        height: 145px;
+    }
+
+    .contact-icons:hover{
+        opacity: .3;
+    }
+
+    .copyright-info{
+        font-size: 1.5em;
+    }
 }

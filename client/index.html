@@ -4,12 +4,26 @@
         <title>Erik Asland | Full Stack Web Developer</title>
         <link rel='stylesheet' type='text/css' href='static/stylesheets/reset.css'>
         <link rel='stylesheet' type='text/css' href='static/stylesheets/styles.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+        <script src='jquery.js'></script>
         <script src='angular.js'></script>
         <script src='angularroutes.js'></script>
         <script src='js/main.js'></script>
         <script src='js/controllers/landingcontroller.js'></script>
+        <script type="text/javascript">
+            // $(document).scroll(function() {
+            //     var element = $('#up-arrow-link')[0].offsetTop
+            //     var y = $(this).scrollTop();
+
+            //     if(y > element){
+            //         $('#up-arrow-link').css('visibility', 'visible')
+            //     }else{
+            //         $('#up-arrow-link').css('visibility', 'hidden')
+            //     }
+            // });
+        </script>
     </head>
     <body>
-        <div ng-view=''></div>
+        <div id='view' ng-view=''></div>
     </body>
 </html>
