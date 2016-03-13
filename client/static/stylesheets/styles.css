@@ -300,6 +300,10 @@
         color: black;
     }
 
+    .project-bottom-desc{
+        padding-top: 1em;
+    }
+
     .checkitout-btn{
         font-family: 'WSBold';
         width: 80%;
@@ -730,7 +734,6 @@
 
     .project-bottom-desc{
         width: 10em;
-        padding-top: 1em;
     }
 
     .project-caption{
@@ -791,7 +794,7 @@
     }
 
     .contact-contain{
-        width: 39.2em;
+        width: 39.5em;
     }
     
     .contact-title{
