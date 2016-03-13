@@ -50,6 +50,10 @@
     }
 }
 
+.border-black{
+    border: 2px solid black;
+}
+
 @media screen and (min-width: 0px){
 
     .checkitout-btn, .project-container, .profile-img, #down-arrow-link, .hire-me-btn{
@@ -172,6 +176,7 @@
         left: 50%;
         bottom: -2em;
         z-index: 2;
+        cursor: pointer;
     }
 
     .menu-icon{
@@ -335,7 +340,7 @@
         font-family: 'WSLight';
         font-size: .5em;
         text-align: center;
-        color: black;
+        color: white;
     }
 
     .project-bottom-desc{
@@ -353,6 +358,7 @@
         color: white;
         position: relative;
         left: 50%;
+        cursor: pointer;
     }
 
     #btn-three-margin{
@@ -780,7 +786,7 @@
     }
 
     #flip-container-one, .flip-container-one{
-        height: 11.95em;
+        height: 12em;
     }
 
     .flip-container:hover .flipper, .flip-container.hover .flipper, .back {
@@ -797,7 +803,15 @@
     }
 
     .flipper {
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
         transform-style: preserve-3d;
         position: relative;
         height: 100%;
